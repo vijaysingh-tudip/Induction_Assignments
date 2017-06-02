@@ -1,0 +1,19 @@
+#out{
+ position: relative;
+ width: 30vmin;
+ height: 30vmin;
+ top: 30vh;
+ left: 40vw;
+ 
+ 
+ }
+#hi{
+     padding: 30%;
+     position: absolute;
+    text-align: center;
+	background: red;
+	
+  color: white;
+  border: 3px solid black;
+	
+}	

@@ -1,0 +1,23 @@
+<!Doctype HTML>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function(){
+	$("h1").hover(function(){
+	$(this).css("color" , "green");
+	});
+	$("h1").mouseout(function(){
+	$(this).css("color" , "black");
+	});
+ })
+</script>
+<style>
+h1 {text-align : center}
+</style>
+</head>
+<body>
+<h1>This is text</h1>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function () {
+            var count=0;
+           $('#text1').keypress(function () {
+               count+=1;
+               $('#text2').val(count);
+           });
+        });
+</script>
+</head>
+<body>
+Enter the text:  <input type="text" id="text1"></input><br><br>
+Counts:  <input type="text" id="text2"></input>
+</body>
+</html>

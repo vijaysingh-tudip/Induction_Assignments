@@ -1,0 +1,46 @@
+<!Doctype html>
+<html lan="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function like() {
+                if (localStorage.likecount) {
+                    localStorage.likecount = Number(localStorage.likecount)+1;
+                } else {
+                    localStorage.likecount = 1;
+                }
+                $('#like').html("Like : "+localStorage.likecount);
+        }
+
+        function dislike() {
+                if (localStorage.dislikecount) {
+                    localStorage.dislikecount = Number(localStorage.dislikecount)+1;
+                } else {
+                    localStorage.dislikecount = 1;
+                }
+                $('#dislike').html("Dislike : "+localStorage.dislikecount);
+        }
+
+
+</script>
+<style>
+img {
+	width: 80vmin;
+	height: 50vmin;
+}
+</style>
+</head>
+<body>
+<div>
+<img src="images.jpg"></img>
+<br><br>
+<button id="btn1" onclick="like()" style="width: 20vmin; text-align:center">Like</button>
+<button id="btn2" onclick="dislike()" style="width: 20vmin; text-align:center">Dislike</button>
+</div><br>
+<div>
+<span id="like" style="display: inline-block; width:20vmin"></span>
+<span id="dislike" style="display: inline-block; width:20vmin"></span>
+</div>
+</body>
+</html>

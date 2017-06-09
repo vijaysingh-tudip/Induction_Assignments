@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+table, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body bgcolor="lightblue">
+
+<div style="background-color:lightgreen; width:50%">
+ <fieldset>
+ <legend><b>Form</b></legend>
+  Name:<br>
+  <input type="text" id="i1" name="name"><br><br>
+  ID:<br>
+  <input type="number" id="i2" name="id"><br><br>
+   Age:<br>
+  <input type="number" id="i3" name="age"><br><br>
+  
+
+<button onclick="Addnew()">ADD</button><br><br>
+
+<table id="myTable">
+  <tr>
+    <td>NAME</td>
+    <td>ID</td>
+	<td>AGE</td>
+  </tr>
+ </table>
+ </fieldset>
+  </div>
+
+<br>
+
+
+
+<script >
+		function Addnew()
+		{
+			
+			var xhttp = new XMLHttpRequest();
+			
+
+  			xhttp.onreadystatechange = function() {
+   			 if (this.readyState == 4 && this.status == 200) {
+				var table1 = document.getElementById("myTable");
+			 	var row = table1.insertRow(1);
+   			 var cell1 = row.insertCell(0);
+    			var cell2 = row.insertCell(1);
+    			var cell3 = row.insertCell(2);
+   			 cell1.innerHTML = document.getElementById("i1").value ;
+   			 cell2.innerHTML = document.getElementById("i2").value;
+   			  cell3.innerHTML = document.getElementById("i3").value;
+
+   			  }
+  };
+  xhttp.open("post", "ajax.txt", true);
+  
+  xhttp.send();  			   
+		}
+	</script>
+
+</body>
+</html>
+
